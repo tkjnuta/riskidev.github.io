@@ -1,0 +1,595 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
+
+:root {
+    --primary: rgb(255, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+.fas.fa-check {
+    background-color: green !important;
+    color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.fas.fa-times {
+    background-color: red !important;
+    color: #fff;
+    padding: 4px 6.5px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::selection {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Nunito", "Quicksand", sans-serif !important;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Header */
+header nav {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 99999 !important;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 75px;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav .nav-container .nav-burger {
+    display: none;
+}
+
+header nav .nav-container .nav-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+header nav .nav-container .nav-title a {
+    text-decoration: none;
+    color: #000;
+}
+
+header nav .nav-container .nav-title a h1 span:nth-child(2) {
+    color: var(--primary);
+}
+
+header nav .nav-container .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header nav .nav-container .nav-list li {
+    list-style: none;
+}
+
+header nav .nav-container .nav-list li a {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    padding: 2px 15px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+    border: 3px solid transparent;
+}
+
+header nav .nav-container .nav-list li a:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+header nav .nav-container .nav-list li .nav-list-login {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+header nav .nav-container .nav-list li .nav-list-login:hover {
+    background-color: transparent !important;
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+header .container {
+    display: flex;
+}
+
+header .container .jumbotron {
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 70px;
+    align-items: center;
+    max-width: 1400px;
+}
+
+header .container .jumbotron .jumbotron-content {
+    flex: 1 1;
+}
+
+header .container .jumbotron .jumbotron-content h1 {
+    font-size: 2.5rem;
+    margin-block: 0.4rem;
+}
+
+header .container .jumbotron .jumbotron-content h1 span {
+    color: var(--primary);
+}
+
+header .container .jumbotron .jumbotron-content p {
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
+header .container .jumbotron .jumbotron-content button {
+    padding: 0.8rem 2.5rem;
+    margin-block-start: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+header .container .jumbotron .jumbotron-content button:hover {
+    background-color: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+header .container .jumbotron .jumbotron-image {
+    flex: 1;
+    display: flex;
+}
+
+header .container .jumbotron .jumbotron-image img {
+    margin: auto;
+    min-width: 600px;
+    width: 600px;
+}
+/* End Header */
+
+/* Article */
+main #content article {
+    padding: 50px 60px;
+}
+/* End Article */
+
+/* Service */
+main #content .service {
+    max-width: 1400px;
+    margin: auto;
+}
+
+main #content .service .service-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main #content .service .service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+main #content .service .service-container .service-card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: stretch;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+main #content .service .service-container .service-card:hover {
+    transform: scale(1.05);
+}
+
+main #content .service .service-container .service-card .service-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+main #content .service .service-container .service-card h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main #content .service .service-container .service-card h2 span {
+    display: block;
+}
+
+main #content .service .service-container .service-card p {
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+}
+/* End Service */
+
+/* Pricing */
+main #content .pricing {
+    max-width: 1400px;
+    margin: auto;
+}
+
+main #content .pricing .pricing-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+main #content .pricing .pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+main #content .pricing .pricing-container .pricing-card {
+    width: 400px;
+    min-height: 400px;
+    background-color: rgb(255, 220, 220);
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 1.1rem;
+    box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-label h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-label p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-align: center;
+    font-weight: 500;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-list ul li {
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-button {
+    width: 50%;
+    display: block;
+    padding: 4px 15px;
+    border-radius: 500px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--primary);
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    border: 3px solid transparent;
+    color: #fff;
+}
+
+main #content .pricing .pricing-container .pricing-card .pricing-button:hover {
+    background-color: #fff;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+main #content .pricing .pricing-container .pricing-card:nth-child(2) {
+    background-color: rgb(255, 90, 90);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+main
+    #content
+    .pricing
+    .pricing-container
+    .pricing-card:nth-child(2)
+    .pricing-button {
+    background-color: rgb(255, 220, 220);
+    color: rgb(255, 90, 90);
+    border-color: rgb(255, 220, 220);
+}
+
+main
+    #content
+    .pricing
+    .pricing-container
+    .pricing-card:nth-child(2)
+    .pricing-button:hover {
+    background-color: rgb(255, 90, 90);
+    border-color: #fff;
+    color: #fff;
+}
+/* End Pricing */
+
+/* About */
+main #content .about {
+    max-width: 1400px;
+    margin: auto;
+}
+
+main #content .about .about-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+main #content .about .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    padding: 0 30px;
+}
+
+main #content .about .about-container .about-content {
+    font-size: 1.2rem;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 60%;
+}
+
+main #content .about .about-container .about-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+main #content .about .about-container .about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
+    border: 10px solid #fff;
+}
+/* End About */
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 60px;
+}
+
+footer .footer-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer .footer-list li {
+    list-style: none;
+}
+
+footer .footer-list li a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .footer-list li a:hover {
+    color: var(--primary);
+}
+
+footer hr {
+    width: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+/* End Footer */
+
+/* Media Query */
+@media screen and (max-width: 1000px) {
+    header nav .nav-container .nav-list {
+        position: absolute;
+        z-index: -999;
+        background-color: rgba(255, 255, 255, 1);
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-100%);
+    }
+
+    header nav .nav-container .nav-list.slide {
+        transform: translateX(0);
+    }
+
+    header nav .nav-container .nav-burger {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    header nav .nav-container .nav-burger .fas.fa-bars {
+        font-size: 2rem;
+    }
+
+    header .container .jumbotron .jumbotron-content h1 {
+        font-size: 2rem;
+        margin-block: 0.4rem;
+    }
+
+    header .container .jumbotron .jumbotron-content h1 span {
+        color: var(--primary);
+    }
+
+    header .container .jumbotron .jumbotron-content p {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+
+    header .container .jumbotron .jumbotron-content button {
+        padding: 0.6rem 2rem;
+        margin-block-start: 1rem;
+        text-transform: capitalize;
+        font-size: 1rem;
+    }
+
+    header .container .jumbotron .jumbotron-image img {
+        margin: auto;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    main #content .pricing .pricing-container {
+        gap: 1.3rem;
+    }
+
+    main #content .pricing .pricing-container .pricing-card:nth-child(2) {
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header .container .jumbotron {
+        margin-top: 2rem;
+        padding: 1rem;
+        flex-direction: column;
+    }
+
+    header .container .jumbotron .jumbotron-content h1 {
+        font-size: 1.8rem;
+        margin-block: 0.4rem;
+    }
+
+    header .container .jumbotron .jumbotron-image {
+        order: -1;
+    }
+
+    main #content article {
+        padding: 40px 14px;
+    }
+
+    main #content .service .service-container .service-card {
+        width: 100%;
+    }
+
+    main #content .about .about-container {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    main #content .about .about-container .about-content {
+        width: 100%;
+        text-align: justify;
+    }
+
+    footer .footer-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    footer .footer-list li a {
+        font-size: 1rem;
+    }
+
+    footer hr {
+        width: 100%;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+/* End Media QUery */
+
+/* Navbar Shadow */
+.navbar-shadow {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* End Navbar Shadow */
